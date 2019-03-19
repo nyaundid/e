@@ -19,16 +19,14 @@ function create_file() {
 touch rds-message.txt
 
 #running the command:
-
-nc -vz ecotech-db1.cznnerkufhvt.us-east-1.rds.amazonaws.com 3306
+nc -vz ecotech-db1.cznnerkufhvt.us-east-1.rds.amazonaws.com 3306 > rds-message.txt
 
 #Create a file called ecoweb1-identity.json
 
 touch ecoweb1-identity.json
 
 #in the present working directory containing the data returned by accessing the URL:
-
-curl -w "\n" http://169.254.169.254/latest/dynamic/instance-identity/document/
+curl -w "\n" http://169.254.169.254/latest/dynamic/instance-identity/document/ > ecoweb1-identity.json
 
 }
 
